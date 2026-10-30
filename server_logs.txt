@@ -1,0 +1,6 @@
+INFO: User admin logged in successfully from 192.168.1.10
+WARNING: Failed password attempt for user root from 45.33.32.156
+WARNING: Failed password attempt for user root from 45.33.32.156
+WARNING: Failed password attempt for user root from 45.33.32.156
+ALERT: Multiple failed login attempts detected from IP: 45.33.32.156
+WARNING: Failed password attempt for user admin from 198.51.100.42
