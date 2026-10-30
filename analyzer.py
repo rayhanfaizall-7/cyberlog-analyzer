@@ -1,10 +1,9 @@
 import re
 import os
+import argparse
 
 # Advanced Security Log Analyzer & Threat Detector
-# Designed for InfoSec Master's Portfolio
-
-LOG_FILE = "server_logs.txt"
+# Designed for InfoSec Portfolio
 
 def analyze_logs(file_path):
     print(f"[*] Opening security log file: {file_path}\n")
@@ -24,7 +23,6 @@ def analyze_logs(file_path):
         logs = file.readlines()
 
     for log in logs:
-        # Strip any extra newline characters
         log = log.strip()
         
         if "Failed password" in log or "ALERT" in log:
@@ -35,7 +33,6 @@ def analyze_logs(file_path):
             match = re.search(ip_pattern, log)
             if match:
                 ip = match.group()
-                # Count occurrences per IP address
                 ip_counts[ip] = ip_counts.get(ip, 0) + 1
 
     print(f"\n[!] Analysis complete. Total threats found: {threat_count}")
@@ -48,4 +45,10 @@ def analyze_logs(file_path):
         print("No malicious IPs detected.")
 
 if __name__ == "__main__":
-    analyze_logs(LOG_FILE)
+    # Setup command-line argument parsing for professional CLI usage
+    parser = argparse.ArgumentParser(description="Professional Security Log Analyzer & Threat Detector")
+    parser.add_argument("logfile", help="Path to the log file to analyze")
+    
+    args = parser.parse_args()
+    analyze_logs(args.logfile)
+  
