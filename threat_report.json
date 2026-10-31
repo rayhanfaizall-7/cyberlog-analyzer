@@ -1,0 +1,16 @@
+{
+    "scan_timestamp": "2026-10-31 19:10:40.239943",
+    "source_log_file": "server_logs.txt",
+    "total_threats_found": 5,
+    "ip_threat_summary": {
+        "45.33.32.156": 4,
+        "198.51.100.42": 1
+    },
+    "detected_events": [
+        "WARNING: Failed password attempt for user root from 45.33.32.156",
+        "WARNING: Failed password attempt for user root from 45.33.32.156",
+        "WARNING: Failed password attempt for user root from 45.33.32.156",
+        "ALERT: Multiple failed login attempts detected from IP: 45.33.32.156",
+        "WARNING: Failed password attempt for user admin from 198.51.100.42"
+    ]
+}
